@@ -1,12 +1,16 @@
-# PF-Net-Point-Fractal-Network
+# Enhancing Point Cloud Completion with Fine-Grained Geometric Perception
+Submitted to the Visual Computer Journal
+
+This repository implements the FGGP-PCC network.
+By integrating a collaborative hierarchical attention architecture,
+the network deeply fuses local geometric features with global contextual information, achieving high‑fidelity reconstruction of complex missing structures. To evaluate the effectiveness of the proposed method, we compare it with other state‑of‑the‑art approaches on benchmark datasets. The method achieves leading results in both subjective visual quality and objective quantitative metrics, while also demonstrating significant advantages in lightweight design and time efficiency.
 
 This repository is still under constructions.
 
 If you have any questions about the code, please email me. Thanks!
 
-This is the Pytorch implement of CVPR2020 PF-Net: Point Fractal Network for 3D Point Cloud Completion. 
+This is the Pytorch implement of Enhancing Point Cloud Completion with Fine-Grained Geometric Perception.
 
-https://arxiv.org/abs/2003.00410
 
 ##0) Environment
 Pytorch 1.0.1
@@ -14,12 +18,14 @@ Python 3.7.4
 
 ##1) Dataset
 ```
-  cd dataset
-  bash download_shapenet_part16_catagories.sh
+  Shapenet：https://www.shapenet.org/
+  Completion3D：https://completion3d.stanford.edu/
+  PCN:https://gateway.infinitescript.com/s/ShapeNetCompletion
+  modelnet40：http://modelnet.cs.princeton.edu/#
 ```
 ##2) Train
 ```
-python Train_FPNet.py 
+python Train_main.py 
 ```
 Change ‘crop_point_num’ to control the number of missing points.
 Change ‘point_scales_list ’to control different input resolutions.
